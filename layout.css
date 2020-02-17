@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url("paper_fibers.png"); /* Background pattern from Toptal Subtle Patterns */
+    display: grid;
+    grid-template-columns: 1fr minmax(100px, 1200px) 1fr;
+    grid-template-rows: minmax(min-content, max-content) 1fr 100px;
+    grid-template-areas: 
+    "header header header"
+    ". main ."
+    ". footer .";
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 82px;
+    font-size: 4vw;
+    padding: 0;
+    margin: 10px;
+}
+@media (max-width: 1000px) {
+    .header h1 {
+        font-size: 41px;
+    }
+}
+@media (min-width: 2000px) {
+    .header h1 {
+        font-size: 82px;
+    }
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    margin-top: 40px;
+}
